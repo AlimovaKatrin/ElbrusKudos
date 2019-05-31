@@ -1,0 +1,75 @@
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:20px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <h4 class="w3-center">{{user}}</h4>
+
+                    <p class="w3-center"><img src="{{picture}}" class="w3-circle" style="height:106px;width:106px"
+                            alt="Avatar"></p>
+                </div>
+            </div>
+            <br>
+
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+
+                    <a href="auth/logout"><button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-google fa-fw w3-margin-right">
+                            </i> LogOut</button></a>
+
+                    <a href="/profile"> <button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                            class="fa fa-bell fa-fw w3-margin-right"></i> Main </button> </a>
+
+                    <a href="/allkudos"><button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> watch all Kudos</button></a>
+
+                    <a href="/kudo"> <button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-envelope fa-fw w3-margin-right">
+                            </i> Make Kudos </button></a>
+
+                </div>
+            </div>
+            <br>
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+                <h4>All users:</h4>
+                    {{#each members}}
+                    <ul>
+                        <li>{{this.username}}</li>
+                    </ul>
+                    {{/each}}
+
+
+                </div>
+            </div>
+            <!-- End Left Column -->
+        </div>
+        <div class="w3-col m9">
+            <form>
+            {{#each userKudos}}
+            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+
+                <span class="w3-right w3-opacity">1 min</span>
+                <h4>From:{{this.author}} <br></h4>
+                <hr class="w3-clear">
+                <p class='text'value='{{this.text}}'>{{this.text}}</p>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <button class= 'w3-button w3-white w3-border w3-circle'>Del</button>
+                </div>
+            </div>
+            {{/each}}
+            </form>
+            <!-- End Middle Column -->
+        </div>
+        <!-- End Grid -->
+    </div>
+    <!-- End Page Container -->
+</div>
+
+   <script src = "../js/profile.js"></script>

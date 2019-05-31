@@ -1,0 +1,69 @@
+<div class="w3-row" id="contact">
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:20px">
+        <!-- The Grid -->
+        <div class="w3-row">
+            <!-- Left Column -->
+            <div class="w3-col m3">
+                <!-- Profile -->
+                <div class="w3-card w3-round w3-white">
+                    <div class="w3-container">
+                        <h4 name="author" class="w3-center">{{user}}</h4>
+                        <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle"
+                                style="height:106px;width:106px" alt="Avatar"></p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Accordion -->
+                <div class="w3-card w3-round">
+                    <div class="w3-white">
+
+                        <button class="w3-button w3-block w3-theme-l1 w3-left-align"><a href="auth/logout"></a><i
+                                    class="fa fa-google fa-fw w3-margin-right">
+                                </i> LogOut</button>
+
+                        <button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> watch all Kudos</button>
+
+                        <button class="w3-button w3-block w3-theme-l1 w3-left-align"><a href="/kudo"></a><i
+                                    class="fa fa-envelope fa-fw w3-margin-right">
+                                </i> make Kudo</button>
+
+                        <button class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-bell fa-fw w3-margin-right"></i> Notifications</button>
+                    </div>
+                </div>
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Middle Column -->
+            <div class="w3-col m9">
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <h1>Make Kudo</h1>
+                    <p class="w3-opacity">Type bellow</p>
+                    <form class="w3-container w3-card w3-padding-32 w3-white" target="_blank">
+                        <div class="w3-section">
+                            <label>Name</label>
+                            <select  id="NameSuper" class="w3-input" style="width:100%;" type="text" >
+                                {{#each members}}
+                                <option  >{{this.username}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="w3-section">
+                            <label>Message</label>
+                            <input name="textKudos"class="w3-input" style="width:100%;" type="text" name="Message">
+                        </div>
+                        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
+                    </form>
+                    <br>
+                </div>
+                <!-- End Middle Column -->
+            </div>
+            <!-- End Grid -->
+        </div>
+        <!-- End Page Container -->
+    </div>
+    
+    <script src = "../js/kudo.js"></script>

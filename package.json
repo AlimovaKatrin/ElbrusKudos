@@ -1,0 +1,22 @@
+{
+  "name": "express-intro",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-redis": "^3.4.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "hbs": "^4.0.3",
+    "mongoose": "^5.5.11",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
